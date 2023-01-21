@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,500;1,400;1,700&display=swap');
+
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+    height: 100vh;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.faq{
+
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    max-width: 700px;
+}
+.card{
+
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 20px 20px rgb(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 1000px;
+}
+.women{
+   position:absolute;
+}
+.box{
+   position: absolute;
+}
+.question{
+    font-size: 25px;
+    font-weight: 300;
+    padding: 10px 20px;
+    position: relative;
+    cursor: pointer;
+    border-bottom: 1px solid hsl(240, 5%, 91%) 
+}
+.question::after{
+    content: "˅";
+    font-size: 20px;
+    color: hsl(14, 88%, 65%);
+    position: absolute;
+    right: 10px;
+}
+.answer{
+    padding: 10px 20px;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 10ms ease;
+}
+.question.open +.answer{
+    opacity: 1;
+    overflow: visible;
+    height: 100%;
+    padding-bottom: 10px;
+}
+
+.question.open::after{
+    content: "^";
+    font-size: 20px;
+    color: hsl(14, 88%, 65%);
+}
